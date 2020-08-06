@@ -1,0 +1,851 @@
+2020/08/06-09:50 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Starting ScreenParkApplication on DESKTOP-1LS7BN6 with PID 6668 (D:\workSpaceIdea\screen_park\target\classes started by Administrator in D:\workSpaceIdea\screen_park)
+2020/08/06-09:50 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- No active profile set, falling back to default profiles: default
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSourceConfiguration' of type [com.gyt.screen_park.config.DataSourceConfiguration$$EnhancerBySpringCGLIB$$7208a6db] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:50 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog- MLog clients using slf4j logging.
+2020/08/06-09:50 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry- Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020/08/06-09:50 [restartedMain] INFO  com.gyt.screen_park.config.DataSourceConfiguration- ==========dataSourcecom.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge0zsab1hofqt31o3cohg|702d5705, dataSourceName -> 1hge0zsab1hofqt31o3cohg|702d5705 ]
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSource' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'transcationManagementConfiguration' of type [com.gyt.screen_park.config.TranscationManagementConfiguration$$EnhancerBySpringCGLIB$$a749d9c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 9000 (http)
+2020/08/06-09:50 [restartedMain] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2020/08/06-09:50 [restartedMain] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020/08/06-09:50 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020/08/06-09:50 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2172 ms
+2020/08/06-09:50 [restartedMain] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'helloController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loginService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'adminMapper' is expected to be of type 'com.gyt.screen_park.dao.AdminMapper' but was actually of type 'com.sun.proxy.$Proxy87'
+2020/08/06-09:50 [restartedMain] INFO  org.apache.catalina.core.StandardService- Stopping service [Tomcat]
+2020/08/06-09:50 [restartedMain] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020/08/06-09:50 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'adminMapper' could not be injected as a 'com.gyt.screen_park.dao.AdminMapper' because it is a JDK dynamic proxy that implements:
+
+
+Action:
+
+Consider injecting the bean as one of its interfaces or forcing the use of CGLib-based proxies by setting proxyTargetClass=true on @EnableAsync and/or @EnableCaching.
+
+2020/08/06-09:56 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Starting ScreenParkApplication on DESKTOP-1LS7BN6 with PID 472 (D:\workSpaceIdea\screen_park\target\classes started by Administrator in D:\workSpaceIdea\screen_park)
+2020/08/06-09:56 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- No active profile set, falling back to default profiles: default
+2020/08/06-09:56 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020/08/06-09:56 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020/08/06-09:57 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner- No MyBatis mapper was found in '[com.gyt.screen.dao]' package. Please check your configuration.
+2020/08/06-09:57 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner- No MyBatis mapper was found in '[com.gyt.screen_park]' package. Please check your configuration.
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSourceConfiguration' of type [com.gyt.screen_park.config.DataSourceConfiguration$$EnhancerBySpringCGLIB$$f5052e6d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:57 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog- MLog clients using slf4j logging.
+2020/08/06-09:57 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry- Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020/08/06-09:57 [restartedMain] INFO  com.gyt.screen_park.config.DataSourceConfiguration- ==========dataSourcecom.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge0zsab1hooctocx8lrb|2f007ddc, dataSourceName -> 1hge0zsab1hooctocx8lrb|2f007ddc ]
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSource' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'transcationManagementConfiguration' of type [com.gyt.screen_park.config.TranscationManagementConfiguration$$EnhancerBySpringCGLIB$$2a466159] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 9000 (http)
+2020/08/06-09:57 [restartedMain] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2020/08/06-09:57 [restartedMain] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020/08/06-09:57 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020/08/06-09:57 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2433 ms
+2020/08/06-09:57 [restartedMain] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'helloController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loginService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.gyt.screen_park.dao.AdminMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2020/08/06-09:57 [restartedMain] INFO  org.apache.catalina.core.StandardService- Stopping service [Tomcat]
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020/08/06-09:57 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.gyt.screen_park.dao.AdminMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.gyt.screen_park.dao.AdminMapper' in your configuration.
+
+2020/08/06-09:57 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Starting ScreenParkApplication on DESKTOP-1LS7BN6 with PID 7396 (D:\workSpaceIdea\screen_park\target\classes started by Administrator in D:\workSpaceIdea\screen_park)
+2020/08/06-09:57 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- No active profile set, falling back to default profiles: default
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020/08/06-09:57 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner- No MyBatis mapper was found in '[com.gyt.screen.dao]' package. Please check your configuration.
+2020/08/06-09:57 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner- No MyBatis mapper was found in '[com.gyt.screen_park]' package. Please check your configuration.
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSourceConfiguration' of type [com.gyt.screen_park.config.DataSourceConfiguration$$EnhancerBySpringCGLIB$$66d2f623] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:57 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog- MLog clients using slf4j logging.
+2020/08/06-09:57 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry- Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020/08/06-09:57 [restartedMain] INFO  com.gyt.screen_park.config.DataSourceConfiguration- ==========dataSourcecom.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge0zsab1hop9do1085w7d|2e007296, dataSourceName -> 1hge0zsab1hop9do1085w7d|2e007296 ]
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSource' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'transcationManagementConfiguration' of type [com.gyt.screen_park.config.TranscationManagementConfiguration$$EnhancerBySpringCGLIB$$9c14290f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 9000 (http)
+2020/08/06-09:57 [restartedMain] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2020/08/06-09:57 [restartedMain] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020/08/06-09:57 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020/08/06-09:57 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2484 ms
+2020/08/06-09:57 [restartedMain] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'helloController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'loginService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.gyt.screen_park.dao.AdminMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2020/08/06-09:57 [restartedMain] INFO  org.apache.catalina.core.StandardService- Stopping service [Tomcat]
+2020/08/06-09:57 [restartedMain] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020/08/06-09:57 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.gyt.screen_park.dao.AdminMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.gyt.screen_park.dao.AdminMapper' in your configuration.
+
+2020/08/06-09:59 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Starting ScreenParkApplication on DESKTOP-1LS7BN6 with PID 5784 (D:\workSpaceIdea\screen_park\target\classes started by Administrator in D:\workSpaceIdea\screen_park)
+2020/08/06-09:59 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- No active profile set, falling back to default profiles: default
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSourceConfiguration' of type [com.gyt.screen_park.config.DataSourceConfiguration$$EnhancerBySpringCGLIB$$47830d8e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:59 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog- MLog clients using slf4j logging.
+2020/08/06-09:59 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry- Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020/08/06-09:59 [restartedMain] INFO  com.gyt.screen_park.config.DataSourceConfiguration- ==========dataSourcecom.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge0zsab1hor9hs6ztk6q|3068abed, dataSourceName -> 1hge0zsab1hor9hs6ztk6q|3068abed ]
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSource' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'transcationManagementConfiguration' of type [com.gyt.screen_park.config.TranscationManagementConfiguration$$EnhancerBySpringCGLIB$$7cc4407a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 9000 (http)
+2020/08/06-09:59 [restartedMain] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2020/08/06-09:59 [restartedMain] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020/08/06-09:59 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020/08/06-09:59 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 1924 ms
+2020/08/06-09:59 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer- LiveReload server is running on port 35729
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping- Adding welcome page template: index
+2020/08/06-09:59 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Context refreshed
+2020/08/06-09:59 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Found 1 custom documentation plugin(s)
+2020/08/06-09:59 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner- Scanning for api listing references
+2020/08/06-09:59 [restartedMain] INFO  org.apache.catalina.core.StandardService- Stopping service [Tomcat]
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020/08/06-09:59 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9000 or configure this application to listen on another port.
+
+2020/08/06-09:59 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2020/08/06-14:21 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Starting ScreenParkApplication on DESKTOP-1LS7BN6 with PID 15264 (D:\workSpaceIdea\screen_park\target\classes started by Administrator in D:\workSpaceIdea\screen_park)
+2020/08/06-14:21 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- No active profile set, falling back to default profiles: default
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSourceConfiguration' of type [com.gyt.screen_park.config.DataSourceConfiguration$$EnhancerBySpringCGLIB$$fa663778] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:21 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog- MLog clients using slf4j logging.
+2020/08/06-14:21 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry- Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020/08/06-14:21 [restartedMain] INFO  com.gyt.screen_park.config.DataSourceConfiguration- ==========dataSourcecom.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge0zsab1hy4h5eitfrpk|77c65c04, dataSourceName -> 1hge0zsab1hy4h5eitfrpk|77c65c04 ]
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSource' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'transcationManagementConfiguration' of type [com.gyt.screen_park.config.TranscationManagementConfiguration$$EnhancerBySpringCGLIB$$2fa76a64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 9000 (http)
+2020/08/06-14:21 [restartedMain] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2020/08/06-14:21 [restartedMain] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020/08/06-14:21 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020/08/06-14:21 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2236 ms
+2020/08/06-14:21 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer- LiveReload server is running on port 35729
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping- Adding welcome page template: index
+2020/08/06-14:21 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Context refreshed
+2020/08/06-14:21 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Found 1 custom documentation plugin(s)
+2020/08/06-14:21 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner- Scanning for api listing references
+2020/08/06-14:21 [restartedMain] INFO  org.apache.catalina.core.StandardService- Stopping service [Tomcat]
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020/08/06-14:21 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9000 or configure this application to listen on another port.
+
+2020/08/06-14:21 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2020/08/06-14:22 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Starting ScreenParkApplication on DESKTOP-1LS7BN6 with PID 14408 (D:\workSpaceIdea\screen_park\target\classes started by Administrator in D:\workSpaceIdea\screen_park)
+2020/08/06-14:22 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- No active profile set, falling back to default profiles: default
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSourceConfiguration' of type [com.gyt.screen_park.config.DataSourceConfiguration$$EnhancerBySpringCGLIB$$108b49b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:22 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog- MLog clients using slf4j logging.
+2020/08/06-14:22 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry- Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020/08/06-14:22 [restartedMain] INFO  com.gyt.screen_park.config.DataSourceConfiguration- ==========dataSourcecom.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge0zsab1hy5grs1cfnsmn|348214b, dataSourceName -> 1hge0zsab1hy5grs1cfnsmn|348214b ]
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSource' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'transcationManagementConfiguration' of type [com.gyt.screen_park.config.TranscationManagementConfiguration$$EnhancerBySpringCGLIB$$45cc7ca1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 9000 (http)
+2020/08/06-14:22 [restartedMain] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2020/08/06-14:22 [restartedMain] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020/08/06-14:22 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020/08/06-14:22 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2135 ms
+2020/08/06-14:22 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer- LiveReload server is running on port 35729
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping- Adding welcome page template: index
+2020/08/06-14:22 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Context refreshed
+2020/08/06-14:22 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Found 1 custom documentation plugin(s)
+2020/08/06-14:22 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner- Scanning for api listing references
+2020/08/06-14:22 [restartedMain] INFO  org.apache.catalina.core.StandardService- Stopping service [Tomcat]
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020/08/06-14:22 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9000 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9000 or configure this application to listen on another port.
+
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2020/08/06-14:22 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Starting ScreenParkApplication on DESKTOP-1LS7BN6 with PID 15176 (D:\workSpaceIdea\screen_park\target\classes started by Administrator in D:\workSpaceIdea\screen_park)
+2020/08/06-14:22 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- No active profile set, falling back to default profiles: default
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 21ms. Found 0 Redis repository interfaces.
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSourceConfiguration' of type [com.gyt.screen_park.config.DataSourceConfiguration$$EnhancerBySpringCGLIB$$4f7cc5cd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:22 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog- MLog clients using slf4j logging.
+2020/08/06-14:22 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry- Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020/08/06-14:22 [restartedMain] INFO  com.gyt.screen_park.config.DataSourceConfiguration- ==========dataSourcecom.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge0zsab1hy5tsy1vm65w4|65edeb1c, dataSourceName -> 1hge0zsab1hy5tsy1vm65w4|65edeb1c ]
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSource' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'transcationManagementConfiguration' of type [com.gyt.screen_park.config.TranscationManagementConfiguration$$EnhancerBySpringCGLIB$$84bdf8b9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8000 (http)
+2020/08/06-14:22 [restartedMain] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2020/08/06-14:22 [restartedMain] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020/08/06-14:22 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020/08/06-14:22 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2025 ms
+2020/08/06-14:22 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer- LiveReload server is running on port 35729
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping- Adding welcome page template: index
+2020/08/06-14:22 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Context refreshed
+2020/08/06-14:22 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Found 1 custom documentation plugin(s)
+2020/08/06-14:22 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner- Scanning for api listing references
+2020/08/06-14:22 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8000 (http) with context path ''
+2020/08/06-14:22 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Started ScreenParkApplication in 4.394 seconds (JVM running for 5.556)
+2020/08/06-14:23 [http-nio-8000-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020/08/06-14:23 [http-nio-8000-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2020/08/06-14:23 [http-nio-8000-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 24 ms
+2020/08/06-14:23 [http-nio-8000-exec-9] INFO  com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource- Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge0zsab1hy5tsy1vm65w4|65edeb1c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge0zsab1hy5tsy1vm65w4|65edeb1c, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://123.206.51.80:3306/zdsq?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020/08/06-14:23 [http-nio-8000-exec-9] DEBUG com.gyt.screen_park.dao.AdminMapper.gainAdminByCondition- ==>  Preparing: select ID, USER_NAME, PASSWORD, TYPE, CREATE_TIME, MODIFY_TIME, DISABLED, TRUE_NAME, LAST_LOGIN_TIME, LAST_LOGIN_IP, EMAIL, TELEPHONE, MOBILEPHONE, ADDRESS, USER_ID,community_id, province_id,city_id ,area_id ,manage_id,property_id , property_name from cxh_tb_admin t where t.user_name = ? and t.password = ? 
+2020/08/06-14:23 [http-nio-8000-exec-9] DEBUG com.gyt.screen_park.dao.AdminMapper.gainAdminByCondition- ==> Parameters: sdkadmin(String), b5e06ee7af2aca94eb6cdd2e13de1da1(String)
+2020/08/06-14:24 [http-nio-8000-exec-9] DEBUG com.gyt.screen_park.dao.AdminMapper.gainAdminByCondition- <==      Total: 0
+2020/08/06-14:24 [http-nio-8000-exec-7] DEBUG com.gyt.screen_park.dao.AdminMapper.gainAdminByCondition- ==>  Preparing: select ID, USER_NAME, PASSWORD, TYPE, CREATE_TIME, MODIFY_TIME, DISABLED, TRUE_NAME, LAST_LOGIN_TIME, LAST_LOGIN_IP, EMAIL, TELEPHONE, MOBILEPHONE, ADDRESS, USER_ID,community_id, province_id,city_id ,area_id ,manage_id,property_id , property_name from cxh_tb_admin t where t.user_name = ? and t.password = ? 
+2020/08/06-14:24 [http-nio-8000-exec-7] DEBUG com.gyt.screen_park.dao.AdminMapper.gainAdminByCondition- ==> Parameters: admin(String), fa138762fec6909a584afcf1a1a1b591(String)
+2020/08/06-14:24 [http-nio-8000-exec-7] DEBUG com.gyt.screen_park.dao.AdminMapper.gainAdminByCondition- <==      Total: 1
+2020/08/06-14:24 [http-nio-8000-exec-5] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.gyt.screen_park.service.impl.MainServiceImpl.getCommunityData(MainServiceImpl.java:186)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$593/1648782752.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy101.getCommunityData(Unknown Source)
+	at com.gyt.screen_park.controller.MainController.getCommunityInfo(MainController.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2020/08/06-14:24 [http-nio-8000-exec-7] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.gyt.screen_park.service.impl.MainServiceImpl.getBaseData(MainServiceImpl.java:72)
+	at com.gyt.screen_park.service.impl.MainServiceImpl.getEntryRecords(MainServiceImpl.java:466)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$593/1648782752.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy101.getEntryRecords(Unknown Source)
+	at com.gyt.screen_park.controller.MainController.getEntryRecords(MainController.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2020/08/06-14:25 [http-nio-8000-exec-2] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.gyt.screen_park.service.impl.MainServiceImpl.getBaseData(MainServiceImpl.java:72)
+	at com.gyt.screen_park.service.impl.MainServiceImpl.getCommunityData(MainServiceImpl.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$593/1648782752.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy101.getCommunityData(Unknown Source)
+	at com.gyt.screen_park.controller.MainController.getCommunityInfo(MainController.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2020/08/06-14:25 [http-nio-8000-exec-4] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.gyt.screen_park.service.impl.MainServiceImpl.getBaseData(MainServiceImpl.java:72)
+	at com.gyt.screen_park.service.impl.MainServiceImpl.getEntryRecords(MainServiceImpl.java:466)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$593/1648782752.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy101.getEntryRecords(Unknown Source)
+	at com.gyt.screen_park.controller.MainController.getEntryRecords(MainController.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2020/08/06-14:25 [http-nio-8000-exec-6] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.gyt.screen_park.service.impl.MainServiceImpl.getCommunityData(MainServiceImpl.java:186)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$593/1648782752.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy101.getCommunityData(Unknown Source)
+	at com.gyt.screen_park.controller.MainController.getCommunityInfo(MainController.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2020/08/06-14:25 [http-nio-8000-exec-8] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]- Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.gyt.screen_park.service.impl.MainServiceImpl.getBaseData(MainServiceImpl.java:72)
+	at com.gyt.screen_park.service.impl.MainServiceImpl.getEntryRecords(MainServiceImpl.java:466)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$593/1648782752.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy101.getEntryRecords(Unknown Source)
+	at com.gyt.screen_park.controller.MainController.getEntryRecords(MainController.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2020/08/06-14:25 [http-nio-8000-exec-8] DEBUG com.gyt.screen_park.dao.AdminMapper.gainAdminByCondition- ==>  Preparing: select ID, USER_NAME, PASSWORD, TYPE, CREATE_TIME, MODIFY_TIME, DISABLED, TRUE_NAME, LAST_LOGIN_TIME, LAST_LOGIN_IP, EMAIL, TELEPHONE, MOBILEPHONE, ADDRESS, USER_ID,community_id, province_id,city_id ,area_id ,manage_id,property_id , property_name from cxh_tb_admin t where t.user_name = ? and t.password = ? 
+2020/08/06-14:25 [http-nio-8000-exec-8] DEBUG com.gyt.screen_park.dao.AdminMapper.gainAdminByCondition- ==> Parameters: sdkadmin(String), 6c8d68ad9f96365edcad40ddd77892d4(String)
+2020/08/06-14:25 [http-nio-8000-exec-8] DEBUG com.gyt.screen_park.dao.AdminMapper.gainAdminByCondition- <==      Total: 1
+2020/08/06-14:25 [http-nio-8000-exec-8] DEBUG com.gyt.screen_park.dao.CommunityMapper.getComIdsByProperty- ==>  Preparing: select id from cxh_tb_community where property_id = ? ORDER BY CODE 
+2020/08/06-14:25 [http-nio-8000-exec-8] DEBUG com.gyt.screen_park.dao.CommunityMapper.getComIdsByProperty- ==> Parameters: 44(String)
+2020/08/06-14:25 [http-nio-8000-exec-8] DEBUG com.gyt.screen_park.dao.CommunityMapper.getComIdsByProperty- <==      Total: 3
+2020/08/06-14:25 [http-nio-8000-exec-8] DEBUG com.gyt.screen_park.dao.PropertyMapper.selectByPrimaryKey- ==>  Preparing: select id, name, person_incharge, phone_incharge, province, province_id, city, city_id, area, area_id, address, introduce, create_time, Update_Time, status,img,logo from cxh_tb_property where id = ? 
+2020/08/06-14:25 [http-nio-8000-exec-8] DEBUG com.gyt.screen_park.dao.PropertyMapper.selectByPrimaryKey- ==> Parameters: 44(Integer)
+2020/08/06-14:25 [http-nio-8000-exec-8] DEBUG com.gyt.screen_park.dao.PropertyMapper.selectByPrimaryKey- <==      Total: 1
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.CommunityMapper.selectCommunityCount- ==>  Preparing: SELECT COUNT(1)communityCount,SUM(carNumbers)as carNumbers FROM cxh_tb_community WHERE disabled=0 and id in ( ? , ? , ? ) 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.CommunityMapper.selectCommunityCount- ==>  Preparing: SELECT COUNT(1)communityCount,SUM(carNumbers)as carNumbers FROM cxh_tb_community WHERE disabled=0 and id in ( ? , ? , ? ) 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.CommunityMapper.selectCommunityCount- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.CommunityMapper.selectCommunityCount- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.CommunityMapper.selectCommunityCount- <==      Total: 1
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.CommunityMapper.selectCommunityCount- <==      Total: 1
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.OrgMapper.selectOrgCount- ==>  Preparing: SELECT A.buildingCount,B.unitCount,C.roomCount FROM ( SELECT SUM( building) AS buildingCount FROM( SELECT COUNT(1) AS building FROM gyt_tb_org WHERE lv =1 and community_id in ( ? , ? , ? ) GROUP BY community_id)m)A, (SELECT SUM( unit) AS unitCount FROM( SELECT COUNT(1) AS unit FROM gyt_tb_org WHERE lv =2 and community_id in ( ? , ? , ? ) GROUP BY community_id)n)B, (SELECT SUM( room) AS roomCount FROM( SELECT COUNT(1) AS room FROM gyt_tb_org WHERE lv =3 and community_id in ( ? , ? , ? ) GROUP BY community_id)p)C 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.OrgMapper.selectOrgCount- ==>  Preparing: SELECT A.buildingCount,B.unitCount,C.roomCount FROM ( SELECT SUM( building) AS buildingCount FROM( SELECT COUNT(1) AS building FROM gyt_tb_org WHERE lv =1 and community_id in ( ? , ? , ? ) GROUP BY community_id)m)A, (SELECT SUM( unit) AS unitCount FROM( SELECT COUNT(1) AS unit FROM gyt_tb_org WHERE lv =2 and community_id in ( ? , ? , ? ) GROUP BY community_id)n)B, (SELECT SUM( room) AS roomCount FROM( SELECT COUNT(1) AS room FROM gyt_tb_org WHERE lv =3 and community_id in ( ? , ? , ? ) GROUP BY community_id)p)C 
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.OrgMapper.selectOrgCount- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String), 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String), 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.OrgMapper.selectOrgCount- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String), 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String), 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.OrgMapper.selectOrgCount- <==      Total: 1
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByRelationship- ==>  Preparing: SELECT relationship,COUNT(1) AS num FROM( SELECT(CASE WHEN relationship=1 THEN 1 WHEN relationship=5 THEN 5 ELSE 0 END)AS relationship FROM cxh_tb_proprietor WHERE 1=1 and community_id in ( ? , ? , ? ) )A GROUP BY A.relationship 
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByRelationship- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByRelationship- <==      Total: 3
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectNumByRelationship- ==>  Preparing: SELECT a.relationship,COUNT(1)num FROM ( SELECT building,unit,FLOOR,room,p.relationship FROM cxh_tb_proprietor p LEFT JOIN cxh_tb_community_address a ON p.address_id=a.id WHERE 1=1 and p.community_id in ( ? , ? , ? ) GROUP BY building,unit,FLOOR,room,p.relationship)A GROUP BY a.relationship 
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectNumByRelationship- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.OrgMapper.selectOrgCount- <==      Total: 1
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByRelationship- ==>  Preparing: SELECT relationship,COUNT(1) AS num FROM( SELECT(CASE WHEN relationship=1 THEN 1 WHEN relationship=5 THEN 5 ELSE 0 END)AS relationship FROM cxh_tb_proprietor WHERE 1=1 and community_id in ( ? , ? , ? ) )A GROUP BY A.relationship 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByRelationship- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectNumByRelationship- <==      Total: 4
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCarCount- ==>  Preparing: SELECT * FROM (SELECT COUNT(1)AS carCount FROM cxh_tb_proprietor WHERE plate_number !='' and community_id in ( ? , ? , ? ) )T, (SELECT COUNT(1)ruZhuNum FROM ( SELECT building,unit,FLOOR,room FROM cxh_tb_proprietor p LEFT JOIN cxh_tb_community_address a ON p.address_id=a.id WHERE 1=1 and p.community_id in ( ? , ? , ? ) GROUP BY building,unit,FLOOR,room)A)D 
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCarCount- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String), 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCarCount- <==      Total: 1
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByGender- ==>  Preparing: SELECT gender,COUNT(1)as num FROM cxh_tb_proprietor WHERE 1=1 and community_id in ( ? , ? , ? ) GROUP BY gender 
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByGender- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByGender- <==      Total: 2
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByHometown- ==>  Preparing: SELECT hometown,COUNT(1)as num FROM cxh_tb_proprietor WHERE 1=1 and community_id in ( ? , ? , ? ) GROUP BY hometown 
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByHometown- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByHometown- <==      Total: 3
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.MainMapper.selectEnterCount- ==>  Preparing: SELECT M.*,(M.allEnterCount-M.zEnterCount)AS pEnterCount FROM ( SELECT A.inTime,IFNULL(A.allEnterCount,0)allEnterCount,IFNULL(B.zEnterCount,0)zEnterCount,IFNULL(C.mainCareEnterCount,0)mainCareEnterCount,IFNULL(D.visitEnterCount,0)visitEnterCount FROM ( SELECT SUBSTR(p.openTime, 9, 2) AS inTime, COUNT(1) AS allEnterCount, SUBSTR(p.openTime, 1, 10) AS openTime FROM gyt_tb_proprietor p LEFT JOIN (SELECT id,relationship, szId,community_id FROM cxh_tb_proprietor WHERE 1=1 and community_id in ( ? , ? , ? ) )cp ON cp.szId = p.szId LEFT JOIN cxh_tb_community c ON c.id = cp.community_id GROUP BY SUBSTR(p.openTime, 1, 10) ORDER BY SUBSTR(p.openTime, 1, 10) DESC LIMIT 9) A LEFT JOIN (SELECT SUBSTR(p.openTime, 1, 10) AS inTime, COUNT(1) AS zEnterCount FROM gyt_tb_proprietor p LEFT JOIN (SELECT id,relationship, szId,community_id FROM cxh_tb_proprietor WHERE 1=1 and community_id in ( ? , ? , ? ) )cp ON cp.szId = p.szId LEFT JOIN cxh_tb_community c ON c.id = cp.community_id WHERE cp.id IS NOT NULL AND cp.relationship = '5' GROUP BY SUBSTR(p.openTime, 1, 10)) B ON A.openTime = B.inTime LEFT JOIN (SELECT SUBSTR(p.openTime,1,10)AS inTime,COUNT(1)AS mainCareEnterCount FROM gyt_tb_proprietor p LEFT JOIN cxh_tb_proprietor cp ON cp.szId = p.szId LEFT JOIN cxh_tb_community c ON c.id = cp.community_id WHERE cp.tagType ='1' and c.id in ( ? , ? , ? ) GROUP BY SUBSTR(p.openTime,1,10))C ON C.inTime = A.openTime LEFT JOIN (SELECT SUBSTR(f.openTime,1,10)AS inTime,COUNT(1)AS visitEnterCount FROM gyt_tb_visit_info f where f.communityName=? GROUP BY SUBSTR(f.openTime,1,10) )D ON A.openTime = D.inTime)M 
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.MainMapper.selectEnterCount- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String), 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String), 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String), 神道口小区(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByRelationship- <==      Total: 3
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectNumByRelationship- ==>  Preparing: SELECT a.relationship,COUNT(1)num FROM ( SELECT building,unit,FLOOR,room,p.relationship FROM cxh_tb_proprietor p LEFT JOIN cxh_tb_community_address a ON p.address_id=a.id WHERE 1=1 and p.community_id in ( ? , ? , ? ) GROUP BY building,unit,FLOOR,room,p.relationship)A GROUP BY a.relationship 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectNumByRelationship- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectNumByRelationship- <==      Total: 4
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCarCount- ==>  Preparing: SELECT * FROM (SELECT COUNT(1)AS carCount FROM cxh_tb_proprietor WHERE plate_number !='' and community_id in ( ? , ? , ? ) )T, (SELECT COUNT(1)ruZhuNum FROM ( SELECT building,unit,FLOOR,room FROM cxh_tb_proprietor p LEFT JOIN cxh_tb_community_address a ON p.address_id=a.id WHERE 1=1 and p.community_id in ( ? , ? , ? ) GROUP BY building,unit,FLOOR,room)A)D 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCarCount- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String), 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCarCount- <==      Total: 1
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByGender- ==>  Preparing: SELECT gender,COUNT(1)as num FROM cxh_tb_proprietor WHERE 1=1 and community_id in ( ? , ? , ? ) GROUP BY gender 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByGender- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByGender- <==      Total: 2
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByHometown- ==>  Preparing: SELECT hometown,COUNT(1)as num FROM cxh_tb_proprietor WHERE 1=1 and community_id in ( ? , ? , ? ) GROUP BY hometown 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByHometown- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.ProprietorMapper.selectCountByHometown- <==      Total: 3
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.CommunityMapper.selectCountByCommunityLevel- ==>  Preparing: SELECT IFNULL(communityLevel,0)communityLevel,COUNT(1)AS num FROM cxh_tb_community WHERE 1=1 and id in ( ? , ? , ? ) GROUP BY communityLevel 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.CommunityMapper.selectCountByCommunityLevel- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.CommunityMapper.selectCountByCommunityLevel- <==      Total: 1
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectRepairAndComplCount- ==>  Preparing: SELECT A.handleStatus,IFNULL(B.repairNum,0)repairNum,IFNULL(C.complaintNum,0)complaintNum FROM (SELECT '0' AS handleStatus FROM DUAL UNION ALL SELECT '1' AS handleStatus FROM DUAL UNION ALL SELECT '2' AS handleStatus FROM DUAL UNION ALL SELECT '3' AS handleStatus FROM DUAL)A LEFT JOIN( SELECT handle_status AS handleStatus ,COUNT(1) AS repairNum FROM cxh_tb_repair_demand WHERE 1=1 and community_id in ( ? , ? , ? ) GROUP BY handle_status)B ON A.handleStatus = B.handleStatus LEFT JOIN( SELECT handle_status AS handleStatus ,COUNT(1) AS complaintNum FROM cxh_tb_complaint WHERE 1=1 and community_id in ( ? , ? , ? ) GROUP BY handle_status)C ON A.handleStatus = C.handleStatus 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectRepairAndComplCount- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String), 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectRepairAndComplCount- <==      Total: 4
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectNotice- ==>  Preparing: SELECT * FROM ( SELECT notice_title AS noticeTitle,modify_time AS modifyTime ,community_id FROM cxh_tb_property_notice WHERE disabled = '0' AND notice_type = '0' AND FIND_IN_SET(?,community_id) union SELECT notice_title AS noticeTitle,modify_time AS modifyTime ,community_id FROM cxh_tb_property_notice WHERE disabled = '0' AND notice_type = '0' AND FIND_IN_SET(?,community_id) union SELECT notice_title AS noticeTitle,modify_time AS modifyTime ,community_id FROM cxh_tb_property_notice WHERE disabled = '0' AND notice_type = '0' AND FIND_IN_SET(?,community_id) ) A GROUP BY noticeTitle ORDER BY modifyTime DESC limit 7 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectNotice- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectNotice- <==      Total: 3
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectSignNoticeCount- ==>  Preparing: SELECT n.notice_title AS noticeTitle,COUNT(1)AS num FROM cxh_tb_member_notice_relation nr LEFT JOIN cxh_tb_property_notice n ON n.id = nr.notice_id LEFT JOIN cxh_tb_proprietor p ON p.id = nr.activity_id LEFT JOIN cxh_tb_community c ON c.id = p.community_id WHERE n.disabled = '0' AND n.notice_type = '0' and c.id in ( ? , ? , ? ) GROUP BY n.notice_title 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectSignNoticeCount- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectSignNoticeCount- <==      Total: 3
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectCountByAction- ==>  Preparing: SELECT A.title,A.create_time as createTime,B.num FROM ( SELECT id,title,create_time FROM cxh_tb_action WHERE disabled='0' and community_id in ( ? , ? , ? ) )A LEFT JOIN (SELECT h.action_id,COUNT(1)AS num FROM cxh_tb_action_participate_history h LEFT JOIN cxh_tb_action a ON a.id = h.action_id WHERE h.disabled='0' and a.community_id in ( ? , ? , ? ) GROUP BY h.action_id)B ON a.id = b.action_id order by A.create_time desc limit 9 
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectCountByAction- ==> Parameters: 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String), 4dc4e28a88484066bb633145781c71be214762(String), fa49fdb671594c0787508395d3b0b4c47280778(String), 403bfc1586f047c88123aa3a36b997883507496(String)
+2020/08/06-14:25 [http-nio-8000-exec-3] DEBUG com.gyt.screen_park.dao.MainMapper.selectCountByAction- <==      Total: 3
+2020/08/06-14:25 [http-nio-8000-exec-5] DEBUG com.gyt.screen_park.dao.MainMapper.selectEnterCount- <==      Total: 9
+2020/08/06-14:35 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2020/08/06-14:35 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Starting ScreenParkApplication on DESKTOP-1LS7BN6 with PID 8644 (D:\workSpaceIdea\screen_park\target\classes started by Administrator in D:\workSpaceIdea\screen_park)
+2020/08/06-14:35 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- No active profile set, falling back to default profiles: default
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSourceConfiguration' of type [com.gyt.screen_park.config.DataSourceConfiguration$$EnhancerBySpringCGLIB$$9734aca0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:35 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog- MLog clients using slf4j logging.
+2020/08/06-14:35 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry- Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020/08/06-14:35 [restartedMain] INFO  com.gyt.screen_park.config.DataSourceConfiguration- ==========dataSourcecom.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge0zsab1hymdj91cpd7pl|7d1093b8, dataSourceName -> 1hge0zsab1hymdj91cpd7pl|7d1093b8 ]
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSource' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'transcationManagementConfiguration' of type [com.gyt.screen_park.config.TranscationManagementConfiguration$$EnhancerBySpringCGLIB$$cc75df8c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8000 (http)
+2020/08/06-14:35 [restartedMain] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2020/08/06-14:35 [restartedMain] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020/08/06-14:35 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020/08/06-14:35 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2068 ms
+2020/08/06-14:35 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer- LiveReload server is running on port 35729
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping- Adding welcome page template: index
+2020/08/06-14:35 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Context refreshed
+2020/08/06-14:35 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Found 1 custom documentation plugin(s)
+2020/08/06-14:35 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner- Scanning for api listing references
+2020/08/06-14:35 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8000 (http) with context path ''
+2020/08/06-14:35 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Started ScreenParkApplication in 4.401 seconds (JVM running for 5.679)
+2020/08/06-14:36 [http-nio-8000-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020/08/06-14:36 [http-nio-8000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2020/08/06-14:36 [http-nio-8000-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 5 ms
+2020/08/06-14:46 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Shutting down ExecutorService 'applicationTaskExecutor'
+2020/08/06-14:46 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Starting ScreenParkApplication on DESKTOP-1LS7BN6 with PID 3236 (D:\workSpaceIdea\screen_park\target\classes started by Administrator in D:\workSpaceIdea\screen_park)
+2020/08/06-14:46 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- No active profile set, falling back to default profiles: default
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate- Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSourceConfiguration' of type [com.gyt.screen_park.config.DataSourceConfiguration$$EnhancerBySpringCGLIB$$1b1c5407] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:46 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog- MLog clients using slf4j logging.
+2020/08/06-14:46 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry- Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+2020/08/06-14:46 [restartedMain] INFO  com.gyt.screen_park.config.DataSourceConfiguration- ==========dataSourcecom.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge0zsab1hz13ml288qsv|3a8ed410, dataSourceName -> 1hge0zsab1hz13ml288qsv|3a8ed410 ]
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'dataSource' of type [com.mchange.v2.c3p0.ComboPooledDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker- Bean 'transcationManagementConfiguration' of type [com.gyt.screen_park.config.TranscationManagementConfiguration$$EnhancerBySpringCGLIB$$505d86f3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8000 (http)
+2020/08/06-14:46 [restartedMain] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2020/08/06-14:46 [restartedMain] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020/08/06-14:46 [restartedMain] INFO  org.apache.jasper.servlet.TldScanner- At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020/08/06-14:46 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring embedded WebApplicationContext
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2827 ms
+2020/08/06-14:46 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping- Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer- LiveReload server is running on port 35729
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping- Adding welcome page template: index
+2020/08/06-14:46 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Context refreshed
+2020/08/06-14:46 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper- Found 1 custom documentation plugin(s)
+2020/08/06-14:46 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner- Scanning for api listing references
+2020/08/06-14:46 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8000 (http) with context path ''
+2020/08/06-14:46 [restartedMain] INFO  com.gyt.screen_park.ScreenParkApplication- Started ScreenParkApplication in 5.107 seconds (JVM running for 6.338)
+2020/08/06-14:46 [http-nio-8000-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020/08/06-14:46 [http-nio-8000-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2020/08/06-14:46 [http-nio-8000-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 7 ms
